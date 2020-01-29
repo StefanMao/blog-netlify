@@ -2,9 +2,6 @@
     <Fixedsidebar>
         <div class="p-content">
             <h1>111</h1>
-            <h1>111</h1>
-            <h1>111</h1>
-            <h1>111</h1>
             
         </div>
     </Fixedsidebar>
@@ -26,8 +23,8 @@ export default {
 
 <style>
 .p-content{
-     display: flex;
-     width:80%;
+    display: flex;
+    width:80%;
     background-color: aqua;
     align-self: center;
 }

@@ -13,6 +13,11 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/plugin-google-analytics',
+      id:''
+
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',

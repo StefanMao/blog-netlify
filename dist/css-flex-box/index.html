@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>Gridsome - Gridsome</title><meta name="gridsome:hash" content="55af111bd0cf98ff37657aa7f4ee0c6f7b28fd11"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.12"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><meta data-vue-tag="ssr" data-key="description" name="description" content="A simple blog designed with Gridsome"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/assets/static/favicon.ce0531f.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/assets/static/favicon.ac8d93a.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/assets/static/favicon.b9532cc.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/assets/static/favicon.f22e9f3.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/assets/static/favicon.62d22cb.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/assets/static/favicon.1539b60.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/assets/static/favicon.dc0cdc5.9bb7ffafafc09ac851d81afb65b8ef59.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/static/favicon.7b22250.9bb7ffafafc09ac851d81afb65b8ef59.png"><link rel="preload" href="/assets/css/0.styles.b300ee43.css" as="style"><link rel="preload" href="/assets/js/app.a84a2b1e.js" as="script"><link rel="preload" href="/assets/js/page--src--templates--post-vue.ce7a5460.js" as="script"><link rel="prefetch" href="/assets/js/page--node-modules--gridsome--app--pages--404-vue.3f96b86f.js"><link rel="prefetch" href="/assets/js/page--src--pages--about-vue.bfe48a5b.js"><link rel="prefetch" href="/assets/js/page--src--pages--home-vue.c5dde5ae.js"><link rel="prefetch" href="/assets/js/page--src--pages--index-vue.80e93cd4.js"><link rel="prefetch" href="/assets/js/page--src--pages--photo-vue.9752c3f2.js"><link rel="prefetch" href="/assets/js/page--src--templates--tag-vue.110b799c.js"><link rel="stylesheet" href="/assets/css/0.styles.b300ee43.css"><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-server-rendered="true" id="app" class="single-post"><div class="arr-back"><a href="/Home/" class="back-link">  ← Go Back</a></div><section class="main-content"><div class="post-title"><h1>Css FlexBox 筆記</h1><p class="post-date"> 29 December 2019 | 1 min read</p></div><div class="post-content"><p class="post-content arictle"><h1 id="css-flexbox-筆記"><a href="#css-flexbox-%E7%AD%86%E8%A8%98" aria-hidden="true"><span class="icon icon-link"></span></a>CSS Flexbox 筆記</h1>
+<h2 id="css-flexbox-介紹"><a href="#css-flexbox-%E4%BB%8B%E7%B4%B9" aria-hidden="true"><span class="icon icon-link"></span></a>CSS Flexbox 介紹</h2>
+<pre class="language-text"><code class="language-text">Flexbox 是一個 CSS3 的盒子模型 ( box model )-靈活的盒子 ( Flexible Box )</code></pre>
+<h2 id="flexbox-模型概念"><a href="#flexbox-%E6%A8%A1%E5%9E%8B%E6%A6%82%E5%BF%B5" aria-hidden="true"><span class="icon icon-link"></span></a>Flexbox 模型概念</h2>
+<p>Flexbox 的盒子模型具有以下的重要佈局參數:</p>
+<ul>
+<li>水平的起點與終點 ( main start、main end )</li>
+<li>垂直的起點與終點 ( cross start、cross end )</li>
+<li>水平軸與垂直軸 ( main axis、cross axis )</li>
+<li>水平尺寸與垂直尺寸 ( main size、cross size )</li>
+</ul>
+<img src ="http://imgur.com/3t1z4W7.png" alt="drawing" width="100%">
+<h2 id="flexbox-屬性介紹"><a href="#flexbox-%E5%B1%AC%E6%80%A7%E4%BB%8B%E7%B4%B9" aria-hidden="true"><span class="icon icon-link"></span></a>Flexbox 屬性介紹</h2>
+<ul>
+<li>display</li>
+<li>flex-direction</li>
+<li>justify-content</li>
+<li>align-items :align-items 決定了內容元素與整個 Flexbox 的「垂直對齊」位置</li>
+<li>align-self :align-self 的設定與 align-items 相同，但目的不同，align-self 的作用在於覆寫已經套用 align-items 的屬性</li>
+<li>align-content</li>
+<li>flex-wrap</li>
+<li>order</li>
+<li>flex  </li>
+</ul>
+<h3 id="display"><a href="#display" aria-hidden="true"><span class="icon icon-link"></span></a>display</h3>
+<pre class="language-text"><code class="language-text">display:flex  
+dlsplay:inline-flex、inline、inline-block(在後方的元素不會換行)  </code></pre>
+<img src ="https://imgur.com/PLkKoDR.png" alt="drawing" width="100%">
+<h3 id="flex-direction"><a href="#flex-direction" aria-hidden="true"><span class="icon icon-link"></span></a>flex-direction</h3>
+<p>flex-direction 表示 Flexbox 內容元素的「排列方向」，分別有下列四種:<br>
+row：預設值，由左到右，從上到下<br>
+row-reverse：與 row 相反<br>
+column：從上到下，再由左到右<br>
+column-reverse：與 column 相反<br>
+<img src ="http://imgur.com/Pc3hwp4.png" alt="drawing" width="100%"></p>
+<h3 id="justify-content"><a href="#justify-content" aria-hidden="true"><span class="icon icon-link"></span></a>justify-content</h3>
+<p>justify-content決定內容元素與整個 Flexbox 的「水平對齊」位置<br>
+利用Flexbox 盒子模型，具有 main start 與 main end 左右兩端點的特性來設定justify-content
+flex-start：預設值，對齊最左邊的 main start<br>
+flex-end：對齊最左邊的 main end<br>
+center：水平置中<br>
+space-between：平均分配內容元素，左右元素將會與 main start 和 main end 貼齊<br>
+space-around：平均分配內容元素，間距也是平均分配<br>
+<img src ="http://imgur.com/4qQsgQT.png" alt="drawing" width="100%"></p>
+<h3 id="flex"><a href="#flex" aria-hidden="true"><span class="icon icon-link"></span></a>flex</h3>
+<p> flex 其實是由三個屬性組合而成，依照先後順序分別是「flex-grow」、「flex-shrink」和「flex-basis」<br>
+如果 flex 只填了一個數值 ( 無單位 )，預設以 flex-grow 的方式呈現，至於三個屬性的解釋如下：  </p>
+<pre class="language-text"><code class="language-text">flex-grow：數字，無單位當子元素的 flex-basis 長度「小」於它自己在父元素分配到的長度，按照數字做相對應的「伸展」比例分配  
+預設值為 0，不會進行彈性變化，不可為負值，設為 1 則會進行彈性變化。  
+
+flex-shrink：數字，無單位，當子元素的 flex-basis 長度「大」於它自己在父元素分配到的長度，按照數字做相對應的「壓縮」比例分配  
+預設值為 1，設為 0 的話不會進行彈性變化，不可為負值。  
+
+flex-basis：子元素的基本大小，作為父元素的大小比較基準，預設值為 0，也因為預設值為 0，所以沒有設定此屬性的時候，會以直接採用 flex-grow 屬性，flex-basis 也可以設為 auto  
+如果設為 auto，就表示子元素以自己的基本大小為單位。  </code></pre>
+</p></div></section></div>
+    <script>window.__INITIAL_STATE__={"data":{"post":{"id":"dc610bb3e9e91251f61078d75cea3f98","title":"Css FlexBox 筆記","content":"\u003Ch1 id=\"css-flexbox-筆記\"\u003E\u003Ca href=\"#css-flexbox-%E7%AD%86%E8%A8%98\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003ECSS Flexbox 筆記\u003C\u002Fh1\u003E\n\u003Ch2 id=\"css-flexbox-介紹\"\u003E\u003Ca href=\"#css-flexbox-%E4%BB%8B%E7%B4%B9\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003ECSS Flexbox 介紹\u003C\u002Fh2\u003E\n\u003Cpre class=\"language-text\"\u003E\u003Ccode class=\"language-text\"\u003EFlexbox 是一個 CSS3 的盒子模型 ( box model )-靈活的盒子 ( Flexible Box )\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Ch2 id=\"flexbox-模型概念\"\u003E\u003Ca href=\"#flexbox-%E6%A8%A1%E5%9E%8B%E6%A6%82%E5%BF%B5\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003EFlexbox 模型概念\u003C\u002Fh2\u003E\n\u003Cp\u003EFlexbox 的盒子模型具有以下的重要佈局參數:\u003C\u002Fp\u003E\n\u003Cul\u003E\n\u003Cli\u003E水平的起點與終點 ( main start、main end )\u003C\u002Fli\u003E\n\u003Cli\u003E垂直的起點與終點 ( cross start、cross end )\u003C\u002Fli\u003E\n\u003Cli\u003E水平軸與垂直軸 ( main axis、cross axis )\u003C\u002Fli\u003E\n\u003Cli\u003E水平尺寸與垂直尺寸 ( main size、cross size )\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003Cimg src =\"http:\u002F\u002Fimgur.com\u002F3t1z4W7.png\" alt=\"drawing\" width=\"100%\"\u003E\n\u003Ch2 id=\"flexbox-屬性介紹\"\u003E\u003Ca href=\"#flexbox-%E5%B1%AC%E6%80%A7%E4%BB%8B%E7%B4%B9\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003EFlexbox 屬性介紹\u003C\u002Fh2\u003E\n\u003Cul\u003E\n\u003Cli\u003Edisplay\u003C\u002Fli\u003E\n\u003Cli\u003Eflex-direction\u003C\u002Fli\u003E\n\u003Cli\u003Ejustify-content\u003C\u002Fli\u003E\n\u003Cli\u003Ealign-items :align-items 決定了內容元素與整個 Flexbox 的「垂直對齊」位置\u003C\u002Fli\u003E\n\u003Cli\u003Ealign-self :align-self 的設定與 align-items 相同，但目的不同，align-self 的作用在於覆寫已經套用 align-items 的屬性\u003C\u002Fli\u003E\n\u003Cli\u003Ealign-content\u003C\u002Fli\u003E\n\u003Cli\u003Eflex-wrap\u003C\u002Fli\u003E\n\u003Cli\u003Eorder\u003C\u002Fli\u003E\n\u003Cli\u003Eflex  \u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003Ch3 id=\"display\"\u003E\u003Ca href=\"#display\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003Edisplay\u003C\u002Fh3\u003E\n\u003Cpre class=\"language-text\"\u003E\u003Ccode class=\"language-text\"\u003Edisplay:flex  \ndlsplay:inline-flex、inline、inline-block(在後方的元素不會換行)  \u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n\u003Cimg src =\"https:\u002F\u002Fimgur.com\u002FPLkKoDR.png\" alt=\"drawing\" width=\"100%\"\u003E\n\u003Ch3 id=\"flex-direction\"\u003E\u003Ca href=\"#flex-direction\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003Eflex-direction\u003C\u002Fh3\u003E\n\u003Cp\u003Eflex-direction 表示 Flexbox 內容元素的「排列方向」，分別有下列四種:\u003Cbr\u003E\nrow：預設值，由左到右，從上到下\u003Cbr\u003E\nrow-reverse：與 row 相反\u003Cbr\u003E\ncolumn：從上到下，再由左到右\u003Cbr\u003E\ncolumn-reverse：與 column 相反\u003Cbr\u003E\n\u003Cimg src =\"http:\u002F\u002Fimgur.com\u002FPc3hwp4.png\" alt=\"drawing\" width=\"100%\"\u003E\u003C\u002Fp\u003E\n\u003Ch3 id=\"justify-content\"\u003E\u003Ca href=\"#justify-content\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003Ejustify-content\u003C\u002Fh3\u003E\n\u003Cp\u003Ejustify-content決定內容元素與整個 Flexbox 的「水平對齊」位置\u003Cbr\u003E\n利用Flexbox 盒子模型，具有 main start 與 main end 左右兩端點的特性來設定justify-content\nflex-start：預設值，對齊最左邊的 main start\u003Cbr\u003E\nflex-end：對齊最左邊的 main end\u003Cbr\u003E\ncenter：水平置中\u003Cbr\u003E\nspace-between：平均分配內容元素，左右元素將會與 main start 和 main end 貼齊\u003Cbr\u003E\nspace-around：平均分配內容元素，間距也是平均分配\u003Cbr\u003E\n\u003Cimg src =\"http:\u002F\u002Fimgur.com\u002F4qQsgQT.png\" alt=\"drawing\" width=\"100%\"\u003E\u003C\u002Fp\u003E\n\u003Ch3 id=\"flex\"\u003E\u003Ca href=\"#flex\" aria-hidden=\"true\"\u003E\u003Cspan class=\"icon icon-link\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003Eflex\u003C\u002Fh3\u003E\n\u003Cp\u003E flex 其實是由三個屬性組合而成，依照先後順序分別是「flex-grow」、「flex-shrink」和「flex-basis」\u003Cbr\u003E\n如果 flex 只填了一個數值 ( 無單位 )，預設以 flex-grow 的方式呈現，至於三個屬性的解釋如下：  \u003C\u002Fp\u003E\n\u003Cpre class=\"language-text\"\u003E\u003Ccode class=\"language-text\"\u003Eflex-grow：數字，無單位當子元素的 flex-basis 長度「小」於它自己在父元素分配到的長度，按照數字做相對應的「伸展」比例分配  \n預設值為 0，不會進行彈性變化，不可為負值，設為 1 則會進行彈性變化。  \n\nflex-shrink：數字，無單位，當子元素的 flex-basis 長度「大」於它自己在父元素分配到的長度，按照數字做相對應的「壓縮」比例分配  \n預設值為 1，設為 0 的話不會進行彈性變化，不可為負值。  \n\nflex-basis：子元素的基本大小，作為父元素的大小比較基準，預設值為 0，也因為預設值為 0，所以沒有設定此屬性的時候，會以直接採用 flex-grow 屬性，flex-basis 也可以設為 auto  \n如果設為 auto，就表示子元素以自己的基本大小為單位。  \u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\n","date":"29 December 2019","timeToRead":1,"description":" Flexbox 是一個 CSS3 的盒子模型 ( box model )-靈活的盒子 ( Flexible Box )","tags":[{"id":"CSS","title":"CSS","path":"\u002Ftag\u002FCSS\u002F"}]}},"context":{}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/assets/js/app.a84a2b1e.js" defer></script><script src="/assets/js/page--src--templates--post-vue.ce7a5460.js" defer></script>
+  </body>
+</html>

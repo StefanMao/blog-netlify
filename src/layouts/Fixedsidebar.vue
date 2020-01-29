@@ -101,7 +101,6 @@ body{
   text-underline-position: under;
 }
 .mypicture{
-  
   margin-top:45%;
 }
 .picture{
