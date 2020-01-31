@@ -9,7 +9,7 @@
         <a href="#">Book</a>
         <a href="#">About</a>
         <div class="mypicture display">
-          <g-image class="picture" src="../maomao.png" quality="80"/>
+          <g-image class="picture" src="../maomao.png" quality="100"/>
         </div>
         <span class="blogtext display">MaoMao's Blog</span>
       </section>

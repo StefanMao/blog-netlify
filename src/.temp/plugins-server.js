@@ -3,6 +3,6 @@ import plugin_gridsome_plugin_google_analytics_5 from "/Users/maoyuchi/Documents
 export default [
   {
     run: plugin_gridsome_plugin_google_analytics_5,
-    options: {}
+    options: {"id":"UA-157371929-1"}
   }
 ]

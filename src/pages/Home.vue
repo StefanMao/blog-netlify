@@ -1,3 +1,4 @@
+
 <template>
   <Fixedsidebar>
     <div class="content">
@@ -25,6 +26,9 @@
 
   </Fixedsidebar>
 </template>
+
+
+
 
 <script>
 import Fixedsidebar from '../layouts/Fixedsidebar'
