@@ -3,41 +3,60 @@
       <section class ="item silder-container">
         <div class="silder-center">
           <div class ="s-text">
-             <a class="silder-text small-text">smile</a>
-            <h1 class="silder-text large-text">Here We Are !</h1>
-            <g-link class="sileder-text silder-button" to="/Home/">Click</g-link>
+             <a class="silder-text small-text">I AM A BOY !</a>
+             <h1 class="silder-text large-text">Here We Are !</h1>
+             <a class="silder-text small-text">This is a book digital agency crafting sophisticated </a>
+             <a class="silder-text small-text">This ia a pen Unordinary digital agency </a>
+            <a href="#" class="sileder-text silder-button" id="silderbtn-text">EXPLORE NOW</a>
           </div>
         </div>
       </section>
       <section class ="item text-container">
         <div class="text-container-box">
-          <h1>Some words...</h1>
-          <h2>一些文字....一些文字....一些文字....一些文字....一些文字....一些文字....一些文字....一些文字....</h2>
-          <h3>Some words...</h3>
-          <a>Some words...</a>
+          <h1>OurStory</h1>
+          <h2>Unordinary digital agency crafting sophisticated and eccentric stuff that will leave you speechless</h2>
+          <h3>we had opportunity to work on wide variety of projects for different clients around the world</h3>
+          <a class="text-container-aword">we're responsible and our client is our priority</a>
         </div>
          
       </section>
        <Navbar/>
-       <section class ="item card-container">
-         <a class="card-title">card-container</a>
-         <div class="card-rol1">
+       <section name ="Card" class ="item card-container">
+         <a class="card-title">Service</a>
+         <div class="card-rol">
            <div class="card-rol1-content">
             <PhotoCard/>
             <PhotoCard/>
            </div>
          </div>
-         <div class="card-rol2">
+         <div class="card-rol">
            <div class="card-rol2-content">
              <PhotoCard/>
            </div>
-           
          </div>
-         
-         
+         <div class ="card-rol">
+           <div class="card-rol3-content">
+             <a class="rol3-content-text">we're responsible and our client is our priority</a>
+             <a class="rol3-btn">Click Me </a>
+           </div>
+         </div>
       </section>
       <section class ="item picture-container">
-         <a class="picture-title">picture-container</a>
+        <div class="picture-rol p-rol1" >
+           <a class="picture-title">picture</a>
+              <div class ="picture-tag">
+                <a class="tag-text">Tag-1</a>
+                <a class="tag-text">Tag-2</a>
+                <a class="tag-text">Tag-3</a>
+                <a class="tag-text">Tag-4</a>
+              </div>
+        </div>
+         <div class="picture-rol p-rol2" >
+           <a class="picture-title">picture</a>
+              
+        </div>
+        
+         
       </section>
       <section class="item footer">
         <div class="item footer">
@@ -110,27 +129,44 @@ export default {
 }
 .silder-text{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .silder-button{
   display: flex;
   justify-content: center;
-  margin: 10px auto;
+  margin: 20% auto;
   color: white;
-  border: 2px solid #4CAF50; /* Green */
-  width: auto;
-  font-size: auto;
+  width: 100%;
+  height: 50%;
+  min-height: 50px;
+  border-radius: 10px;
+  font-size: 2vh;
   text-decoration-line: none;
+  background-color: rgb(157, 207, 240);
+}
+
+#silderbtn-text{
+  align-items: center;
+}
+.silder-button:hover{
+  background-color: rgba(157, 207, 240, 0.7);
+}
+.s-text{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
 }
 .small-text
 {
-  font-size: 2vh;
+  font-size: 1vw;
   color: #ffffff;
   margin: 0px auto;
 }
 .large-text{
-  font-size:4vh;
+  font-size:4vw;
   color: #ffffff;
   margin: 0px auto;
 }
@@ -150,7 +186,9 @@ export default {
   align-items: center;
   font-size:1.5vh;
   min-height: 320px;
-
+}
+.text-container-aword{
+  color: gray;
 }
 .card-container{
   display: flex;
@@ -158,20 +196,22 @@ export default {
   flex-wrap: wrap;
   width:100%;
   max-width: 100%;
-  background-color:rgb(226, 221, 221);
+  background-color:rgb(245, 243, 219);
   flex-wrap: wrap;
   padding: 0.5%;
   justify-content: center;
+  z-index: 0;
 }
 .card-title{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3vh;
+  font-size: 5vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   min-height: 150px;
   max-width: 100%;
 }
-.card-rol1{
+.card-rol{
   width: 100%;
   padding:1%;
 }
@@ -182,16 +222,80 @@ export default {
   max-width: 100%;
   padding:1%;
 }
-.card-rol2{
-  padding:1%;
-  width: 100%;
-}
 .card-rol2-content{
   width:100%;
 }
+.card-rol3-content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin-top:8%;
+}
+.rol3-content-text{
+  color: gray;
+}
+.rol3-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:1%;
+  margin-bottom: 8%;
+  width:auto;
+  height: 15px;
+  min-width: 20%;
+  border-radius: 10px;
+  font-size: 2vh;
+  border-style: solid;
+  border-width: 1px;
+  padding: 1.5%;
+
+}
+
 .picture-container{
-  height: 100%;
-  background-color:burlywood;
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  background-color:white;
+}
+.picture-rol{
+  width:100%;
+  display: flex;
+  padding:1%;
+}
+.p-rol1{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  padding-bottom: 8%;
+}
+.picture-title{
+  display: flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 2%;
+}
+.picture-tag{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration-line:underline;
+  width: 100%;
+}
+.tag-text{
+  margin-right: 1%;
 }
 .footer{
   display: flex;
