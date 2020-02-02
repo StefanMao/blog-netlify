@@ -45,18 +45,32 @@
         <div class="picture-rol p-rol1" >
            <a class="picture-title">picture</a>
               <div class ="picture-tag">
-                <a class="tag-text">Tag-1</a>
-                <a class="tag-text">Tag-2</a>
-                <a class="tag-text">Tag-3</a>
-                <a class="tag-text">Tag-4</a>
+                <g-link class="tag-text">SHOW</g-link>
+                <g-link class="tag-text">VIDEO</g-link>
+                <g-link class="tag-text">BRAND</g-link>
+                <g-link class="tag-text">PHOTO</g-link>
               </div>
         </div>
          <div class="picture-rol p-rol2" >
-           <a class="picture-title">picture</a>
-              
+           
+           <PictureCard/>
+           <PictureCard/>
+           <PictureCard/>
+           <PictureCard/>
+           <PictureCard/>
+           <PictureCard/>
+  
         </div>
-        
-         
+      </section>
+      <section class="item icon-rol">
+      </section>
+      <section class="item review">
+        <div class ="s-text review-text">
+        <a class="silder-text small-text">FINALLY!</a>
+             <h1 class="silder-text large-text">Here We Are !</h1>
+             <a class="silder-text small-text">This is a book digital agency crafting sophisticated </a>
+             <a class="silder-text small-text">This ia a pen Unordinary digital agency </a>
+        </div>
       </section>
       <section class="item footer">
         <div class="item footer">
@@ -74,7 +88,9 @@
 <script>
 import Navbar from '../components/Navbar'
 import PhotoCard from '../components/PhotoCard'
-export default {
+import PictureCard from '../components/PictureCard'
+
+export default  {
     metaInfo: {
       title: "Photo-Page",
       meta:[
@@ -85,12 +101,31 @@ export default {
     },
     components:{
       Navbar,
-      PhotoCard
+      PhotoCard,
+      PictureCard
     }
 }
 </script>
 
 <style>
+/* background picture */
+
+.bg-1{
+  background-image: url('../../content/posts/image/picture-1.png')
+}
+.bg-2{
+  background-image: url('../../content/posts/image/picture-2.png')
+}
+.bg-3{
+  background-image: url('../../content/posts/image/picture-3.png')
+}
+.bg-4{
+  background-image: url('../../content/posts/image/picture-4.png')
+}
+
+
+
+
 /* main content*/
 .photo-main-content{
   display: flex;
@@ -107,6 +142,7 @@ export default {
   flex-wrap: wrap;
   width:100%;
 }
+
 /* silder content */
 
 .silder-container{
@@ -123,7 +159,7 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-width:30%;
+  max-width:40%;
   max-height: 40%;
   margin: 15% auto;
 }
@@ -142,7 +178,7 @@ export default {
   height: 50%;
   min-height: 50px;
   border-radius: 10px;
-  font-size: 2vh;
+  font-size: auto;
   text-decoration-line: none;
   background-color: rgb(157, 207, 240);
 }
@@ -161,9 +197,10 @@ export default {
 }
 .small-text
 {
-  font-size: 1vw;
+  font-size: auto;
   color: #ffffff;
   margin: 0px auto;
+
 }
 .large-text{
   font-size:4vw;
@@ -200,7 +237,6 @@ export default {
   flex-wrap: wrap;
   padding: 0.5%;
   justify-content: center;
-  z-index: 0;
 }
 .card-title{
   display: flex;
@@ -257,7 +293,8 @@ export default {
 .picture-container{
   display: flex;
   flex-direction: column;
-  height: 900px;
+  height: auto;
+  min-height: 1000px;
   background-color:white;
 }
 .picture-rol{
@@ -275,14 +312,22 @@ export default {
   width: 100%;
   padding-bottom: 8%;
 }
+.p-rol2{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
 .picture-title{
   display: flex;
   width:100%;
   justify-content: center;
   align-items: center;
-  font-size: 4vh;
+  font-size: 4rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-bottom: 2%;
+  font-weight: 200;
 }
 .picture-tag{
   display: flex;
@@ -296,21 +341,48 @@ export default {
 }
 .tag-text{
   margin-right: 1%;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 200
+
 }
+
+/* icon-rol content*/
+
+.icon-rol{
+  display: flex;
+  flex-direction: row;
+  height: auto;
+}
+
+.review{
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+.review-text{
+  width:100%;
+  padding: 2% 1%;
+  
+}
+/* footer content*/
 .footer{
   display: flex;
   flex-direction: row;
-  height:30%;
+  min-height: 200px;
   justify-content:center;
   align-items: center;
+  background-color: antiquewhite;
   
 }
 .footer-img{
   object-fit: cover;
-  width:1%;
-  height: 1%;
-  max-width:5%;
-  max-height:5%;
+  width:5%;
+  height: 5%;
+  max-width:10%;
+  max-height:10%;
   margin-right: 1%;
 }
 .text-nav-link{

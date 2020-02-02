@@ -1,7 +1,6 @@
 ---
 title: A post
 date: 2020-01-07
-published: true
 tags: ['Travel', 'Life']
 series: false
 cover_image: ./image/picture-1.png

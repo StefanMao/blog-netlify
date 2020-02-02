@@ -3,7 +3,6 @@
       <input type="text" id="search" placeholder="Search..." v-model.trim="search_text" :change="PassTexttoParent"/>
   </div>
 </template>
-
 <script>
 export default {
     data() {
@@ -16,7 +15,6 @@ export default {
             this.$emit('update',this.search_text)
         }
     }
-    
 }
 </script>
 

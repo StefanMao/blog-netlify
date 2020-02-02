@@ -56,9 +56,10 @@ export default {
     filteredData () {
       return this.$page.posts.edges.filter(edge => {
         const lowercase_title = edge.node.title.toLowerCase()
+        return lowercase_title.indexOf(this.search.toLowerCase()) >= 0
         //console.log(lowercase_title)
         //console.log(lowercase_title.indexOf(this.search.toLowerCase()))
-        return lowercase_title.indexOf(this.search.toLowerCase()) >= 0
+        //console.log(edge)
       })
     }
   },
@@ -75,13 +76,12 @@ query {
   metadata {
     siteName
   }
-  posts: allPost(filter: { published: { eq: true }}) {
+  posts: allPost {
     edges {
       node {
         id
         title
         date (format: "D. MMMM YYYY")
-        timeToRead
         description
         cover_image (width: 770, height: 380, blur: 10)
         path

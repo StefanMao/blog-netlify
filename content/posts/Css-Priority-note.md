@@ -1,7 +1,6 @@
 ---
 title: Css Priority 筆記
 date: 2019-01-07
-published: true
 tags: ['CSS']
 series: false
 cover_image: ./image/picture-3.png

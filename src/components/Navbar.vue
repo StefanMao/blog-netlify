@@ -46,7 +46,7 @@
 }
 .text-nav-link{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: auto;
+    font-size: 2rem;
 
 }
 </style>

@@ -1,7 +1,6 @@
 ---
 title: A post with a cover image
 date: 2019-01-07
-published: true
 tags: ['Travel', 'Life']
 series: false
 cover_image: ./image/picture-5.png

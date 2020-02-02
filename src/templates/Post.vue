@@ -4,7 +4,7 @@
   <section class="main-content">
     <div class="post-title">
       <h1>{{$page.post.title}}</h1>
-      <p class="post-date"> {{ $page.post.date}} | {{$page.post.timeToRead}} min read</p>
+      <p class="post-date"> {{ $page.post.date}}</p>
     </div>
     <div class="post-content">
       <p class="post-content arictle" v-html="$page.post.content" />
@@ -14,11 +14,9 @@
 </div>
 </template>
 <script>
-import PostTags from '../components/PostTags'
 import Arrowback from '../components/Arrowback'
 export default {
   components:{
-    PostTags,
     Arrowback
   }
   
@@ -31,13 +29,7 @@ query Post ($path: String!) {
     title
     content
     date (format: "D MMMM YYYY")
-    timeToRead
     description
-    tags{
-      id
-      title
-      path
-    }
   }
 }
 </page-query>

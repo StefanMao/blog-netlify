@@ -8,10 +8,14 @@ module.exports = {
   siteName: 'Gridsome',
   siteDescription: 'A simple blog designed with Gridsome',
   templates:{
-      Post: '/:title',
+      Post: '/:date/:title',
       Tag: '/tag/:id'
   },
   plugins: [
+    {
+      use:'gridsome-plugin-modal',
+    },
+    
     {
       use: '@gridsome/plugin-google-analytics',
       options:{
