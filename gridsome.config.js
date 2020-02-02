@@ -7,11 +7,18 @@
 module.exports = {
   siteName: 'Gridsome',
   siteDescription: 'A simple blog designed with Gridsome',
+  siteUrl:'https://laughing-hoover-645789.netlify.com',
   templates:{
       Post: '/:date/:title',
       Tag: '/tag/:id'
   },
   plugins: [
+    {
+      use: '@gridsome/plugin-sitemap',
+      options:{
+        cacheTime:600000,//default
+      }
+    },
     {
       use:'gridsome-plugin-modal',
     },
