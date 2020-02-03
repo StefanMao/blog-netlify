@@ -1,6 +1,6 @@
 <template>
     <div class="arr-back">
-    <g-link to="/Home/" class="back-link">  &larr; Go Back</g-link>
+    <g-link onClick="history.go(-1)" class="back-link">  &larr; Go Back</g-link>
   </div>
 </template>
 

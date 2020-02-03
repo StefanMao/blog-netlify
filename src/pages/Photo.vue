@@ -45,21 +45,17 @@
         <div class="picture-rol p-rol1" >
            <a class="picture-title">picture</a>
               <div class ="picture-tag">
-                <g-link class="tag-text">SHOW</g-link>
-                <g-link class="tag-text">VIDEO</g-link>
-                <g-link class="tag-text">BRAND</g-link>
-                <g-link class="tag-text">PHOTO</g-link>
+                <g-link class="tag-text" v-for="tag in $page.tags.edges" :key="tag.node.id" :to="tag.node.path">
+                <p class="tag-title">{{tag.node.title}}</p>
+                </g-link>
+                
+              </div>
+              <div class="picture-search-box">
+                <SearchBox @update='searchupdate'></SearchBox>
               </div>
         </div>
          <div class="picture-rol p-rol2" >
-           
-           <PictureCard/>
-           <PictureCard/>
-           <PictureCard/>
-           <PictureCard/>
-           <PictureCard/>
-           <PictureCard/>
-  
+           <PictureCard v-for="edge in filteredData" :key="edge.node.id" :post="edge.node"/>
         </div>
       </section>
       <section class="item icon-rol">
@@ -89,6 +85,7 @@
 import Navbar from '../components/Navbar'
 import PhotoCard from '../components/PhotoCard'
 import PictureCard from '../components/PictureCard'
+import SearchBox from '@/components/SearchBox'
 
 export default  {
     metaInfo: {
@@ -99,13 +96,85 @@ export default  {
           {'http-equiv':'X-UA-Compatible' , content :'ie=edge'}
         ]
     },
+    data (){
+      return{
+        search:''
+      }
+    },
     components:{
       Navbar,
       PhotoCard,
-      PictureCard
+      PictureCard,
+      SearchBox
+    },
+    methods:{
+        searchupdate(val) {
+          this.search = val
+        }
+    },
+    computed:{
+         filteredData () {
+          return this.$page.posts.edges.filter(edge => {
+              const lowercase_title = edge.node.title.toLowerCase()
+              return lowercase_title.indexOf(this.search.toLowerCase()) >= 0
+          })
+        },
+         tagfilterData (){
+          return this.$page.posts.edges.filter(edge =>{
+            
+          })
+        }
     }
 }
 </script>
+
+
+<page-query>
+query {
+  metadata {
+  siteName
+  }
+  posts: allPost {
+    edges {
+      node {
+        id
+        title
+        date (format: "D. MMMM YYYY")
+        description
+        cover_image (width: 770, height: 380, blur: 10)
+        path
+        tags {
+          id
+          title
+          path
+        }
+      }
+    }
+  }
+  tags:allTag{
+    edges{
+      node
+      {
+        id
+        title
+        path
+      }
+    }
+  }
+  newpost:allPost(sortBy:"date" ,order:DESC ,limit:3){
+    edges{
+      node{
+        id
+        title
+        date(format: "D. MMMM YYYY")
+        cover_image (width: 770, height: 380, blur: 10)
+        path
+      }
+    }
+  }
+}
+</page-query>
+
 
 <style>
 /* background picture */
@@ -136,6 +205,7 @@ export default  {
   background-attachment:fixed;
   background-repeat: repeat;
   background-image: url('../../content/posts/image/picture-6.jpg');
+  background-size: cover;
 }
 .item{
   display: flex;
@@ -148,7 +218,7 @@ export default  {
 .silder-container{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-width: 100%;
   background:url('../../content/posts/image/picture-6.jpg') center center repeat;
   background-size: cover;
 }
@@ -310,15 +380,14 @@ export default  {
   align-items: center;
   background-color: white;
   width: 100%;
-  padding-bottom: 8%;
+  padding-bottom: 3%;
 }
 .p-rol2{
-  width:100%;
+  width:98%;
   display: flex;
   flex-wrap: wrap;
-  max-width: 100%;
+  padding-bottom: 5%;
 }
-
 .picture-title{
   display: flex;
   width:100%;
@@ -339,6 +408,10 @@ export default  {
   text-decoration-line:underline;
   width: 100%;
 }
+.picture-search-box
+{
+  margin-top: 5%;
+}
 .tag-text{
   margin-right: 1%;
   font-size: 1.2rem;
@@ -348,11 +421,10 @@ export default  {
 }
 
 /* icon-rol content*/
-
 .icon-rol{
   display: flex;
   flex-direction: row;
-  height: auto;
+  height: 100%;
 }
 
 .review{
@@ -364,8 +436,6 @@ export default  {
 }
 .review-text{
   width:100%;
-  padding: 2% 1%;
-  
 }
 /* footer content*/
 .footer{

@@ -27,9 +27,6 @@
   </Fixedsidebar>
 </template>
 
-
-
-
 <script>
 import Fixedsidebar from '../layouts/Fixedsidebar'
 import PostList from '@/components/PostList'
@@ -74,7 +71,7 @@ export default {
 <page-query>
 query {
   metadata {
-    siteName
+  siteName
   }
   posts: allPost {
     edges {

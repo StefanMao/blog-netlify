@@ -83,6 +83,7 @@ export default {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    background-color: white;
 }
 .read-link{
     width: auto;

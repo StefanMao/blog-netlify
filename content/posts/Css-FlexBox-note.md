@@ -54,7 +54,9 @@ justify-content決定內容元素與整個 Flexbox 的「水平對齊」位置
     center：水平置中  
     space-between：平均分配內容元素，左右元素將會與 main start 和 main end 貼齊  
     space-around：平均分配內容元素，間距也是平均分配  
-<img src ="http://imgur.com/4qQsgQT.png" alt="drawing" width="100%">
+    
+<img src ="http://imgur.com/4qQsgQT.png" alt="drawing" width="90%">  
+
 ### flex
  flex 其實是由三個屬性組合而成，依照先後順序分別是「flex-grow」、「flex-shrink」和「flex-basis」  
  如果 flex 只填了一個數值 ( 無單位 )，預設以 flex-grow 的方式呈現，至於三個屬性的解釋如下：  
