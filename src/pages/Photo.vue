@@ -43,12 +43,11 @@
       </section>
       <section class ="item picture-container">
         <div class="picture-rol p-rol1" >
-           <a class="picture-title">picture</a>
+           <a class="picture-title">Article</a>
               <div class ="picture-tag">
-                <g-link class="tag-text" v-for="tag in $page.tags.edges" :key="tag.node.id" :to="tag.node.path">
-                <p class="tag-title">{{tag.node.title}}</p>
+                <g-link class="tag-text" v-for="tag in $page.tags.edges" :key="tag.node.id">
+                    <p class="tag-title" @click="tagupdate(tag.node.title)">{{tag.node.title}}</p>
                 </g-link>
-                
               </div>
               <div class="picture-search-box">
                 <SearchBox @update='searchupdate'></SearchBox>
@@ -58,8 +57,12 @@
            <PictureCard v-for="edge in filteredData" :key="edge.node.id" :post="edge.node"/>
         </div>
       </section>
-      <section class="item icon-rol">
+
+      <section class="item newest-rol">
+         <a class="picture-title">Newest Card</a>
+        <Photonewcard v-for="eachnew in $page.newpost.edges" :key="eachnew.node.id" :eachnewpost="eachnew.node"/>
       </section>
+
       <section class="item review">
         <div class ="s-text review-text">
         <a class="silder-text small-text">FINALLY!</a>
@@ -86,6 +89,7 @@ import Navbar from '../components/Navbar'
 import PhotoCard from '../components/PhotoCard'
 import PictureCard from '../components/PictureCard'
 import SearchBox from '@/components/SearchBox'
+import Photonewcard from '@/components/Photonewcard'
 
 export default  {
     metaInfo: {
@@ -98,37 +102,50 @@ export default  {
     },
     data (){
       return{
-        search:''
+        search:'',
+        tag_text: ''
       }
     },
     components:{
       Navbar,
       PhotoCard,
       PictureCard,
-      SearchBox
+      SearchBox,
+      Photonewcard 
     },
     methods:{
         searchupdate(val) {
           this.search = val
+        },
+        tagupdate(title){
+          //console.log(title)
+          this.tag_text = title
+
+
         }
     },
     computed:{
          filteredData () {
           return this.$page.posts.edges.filter(edge => {
+            if(this.tag_text!=''){
+              // tag fileter
+              console.log(edge.node.tags)
+             
+              this.tag_text=''
+            }
+            else
+            {
+              //text filter
               const lowercase_title = edge.node.title.toLowerCase()
+              //console.log(lowercase_title.indexOf(this.search.toLowerCase()))
               return lowercase_title.indexOf(this.search.toLowerCase()) >= 0
-          })
-        },
-         tagfilterData (){
-          return this.$page.posts.edges.filter(edge =>{
-            
+            }
+              
           })
         }
     }
 }
 </script>
-
-
 <page-query>
 query {
   metadata {
@@ -161,7 +178,7 @@ query {
       }
     }
   }
-  newpost:allPost(sortBy:"date" ,order:DESC ,limit:3){
+  newpost:allPost(sortBy:"date" ,order:DESC ,limit:4){
     edges{
       node{
         id
@@ -357,9 +374,7 @@ query {
   border-style: solid;
   border-width: 1px;
   padding: 1.5%;
-
 }
-
 .picture-container{
   display: flex;
   flex-direction: column;
@@ -410,7 +425,7 @@ query {
 }
 .picture-search-box
 {
-  margin-top: 5%;
+  margin-top: 1%;
 }
 .tag-text{
   margin-right: 1%;
@@ -420,11 +435,15 @@ query {
 
 }
 
-/* icon-rol content*/
-.icon-rol{
+/* Newest post*/
+.newest-rol{
   display: flex;
-  flex-direction: row;
-  height: 100%;
+  width: 100%;
+  min-height: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  padding: 1%;
 }
 
 .review{

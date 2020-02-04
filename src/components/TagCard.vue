@@ -39,9 +39,10 @@ export default {
 }
 .top-image{
     width: 95%;
+    height: auto;
     display: flex;
-    background-color:white;
     align-self: center;
+    justify-content: center;
     margin-top:2%;
 }
 .bottom-content{
@@ -52,10 +53,11 @@ export default {
     align-items: center;
 }
 .t-img{
-    width:100%;
+    width: 100%;
     height: 50%;
     display: flex;
     object-fit: cover;
+    
 }
 .title{
   display: flex;

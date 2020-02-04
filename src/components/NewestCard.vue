@@ -22,10 +22,11 @@ export default {
     flex-direction: row;
     padding:0px;
     margin: 3px;
+    
 }
 .left-content{
     width: auto;
-    background-color:rgba(100, 98, 98, 0.041);;
+    background-color:rgba(100, 98, 98, 0.041);
 }
 .right-content{
     width: 100%;
@@ -34,6 +35,8 @@ export default {
     flex-wrap: nowrap;
     margin: 0px;
     padding:0px;
+    justify-content: center;
+    align-items: center;
 }
 .img-square{
   width:80px;
