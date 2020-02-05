@@ -45,6 +45,9 @@
         <div class="picture-rol p-rol1" >
            <a class="picture-title">Article</a>
               <div class ="picture-tag">
+                <g-link class="tag-text">
+                  <p class="tag-title" @click="tagupdate('ALL')">ALL</p>
+                </g-link>
                 <g-link class="tag-text" v-for="tag in $page.tags.edges" :key="tag.node.id">
                     <p class="tag-title" @click="tagupdate(tag.node.title)">{{tag.node.title}}</p>
                 </g-link>
@@ -60,7 +63,8 @@
 
       <section class="item newest-rol">
          <a class="picture-title">Newest Card</a>
-        <Photonewcard v-for="eachnew in $page.newpost.edges" :key="eachnew.node.id" :eachnewpost="eachnew.node"/>
+           <Photonewcard v-for="eachnew in $page.newpost.edges" :key="eachnew.node.id" :eachnewpost="eachnew.node"/>
+        
       </section>
 
       <section class="item review">
@@ -90,7 +94,6 @@ import PhotoCard from '../components/PhotoCard'
 import PictureCard from '../components/PictureCard'
 import SearchBox from '@/components/SearchBox'
 import Photonewcard from '@/components/Photonewcard'
-
 export default  {
     metaInfo: {
       title: "Photo-Page",
@@ -126,22 +129,35 @@ export default  {
     },
     computed:{
          filteredData () {
-          return this.$page.posts.edges.filter(edge => {
-            if(this.tag_text!=''){
-              // tag fileter
-              console.log(edge.node.tags)
-             
-              this.tag_text=''
-            }
-            else
-            {
+           if((this.tag_text==='') | (this.tag_text==='ALL'))
+           {
+              return this.$page.posts.edges.filter(edge => {     
               //text filter
               const lowercase_title = edge.node.title.toLowerCase()
               //console.log(lowercase_title.indexOf(this.search.toLowerCase()))
               return lowercase_title.indexOf(this.search.toLowerCase()) >= 0
-            }
-              
-          })
+             })
+           }
+           else{
+               return this.$page.posts.edges.filter(edge =>{
+              //console.log(edge.node.tags)
+              //判斷tag 是否存在 如果存在return true
+              let isexit = false
+              edge.node.tags.filter(tag =>{
+                //console.log(tag.id)
+                if(tag.id.indexOf(this.tag_text) >= 0)
+                {
+                 isexit = true
+                }
+              })
+               if(isexit == true)
+              {
+                return true
+              }
+             
+            })
+             }
+            
         }
     }
 }
